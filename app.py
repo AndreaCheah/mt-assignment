@@ -38,7 +38,8 @@ def index():
         {"Category": "Beta", "Value": beta_value},
         {"Category": "Charlie", "Value": charlie_value}
     ]
-    
+
+    print(render_template('index.html', table_1=table_1, table_2=table_2))
     return render_template('index.html', table_1=table_1, table_2=table_2)
 
 index()
