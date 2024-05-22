@@ -18,20 +18,18 @@ def index():
     # Alpha value
     A5 = df.loc[df["Index #"] == "A5", "Value"].values[0]
     A20 = df.loc[df["Index #"] == "A20", "Value"].values[0]
-    alpha_value = A5 + A20
-    print(alpha_value)
 
     # Beta value
     A15 = df.loc[df["Index #"] == "A15", "Value"].values[0]
     A7 = df.loc[df["Index #"] == "A7", "Value"].values[0]
-    beta_value = A15 / A7 if A7 != 0 else "undefined"
-    print(beta_value)
 
     # Charlie value
     A13 = df.loc[df["Index #"] == "A13", "Value"].values[0]
     A12 = df.loc[df["Index #"] == "A12", "Value"].values[0]
+
+    alpha_value = A5 + A20
+    beta_value = A15 / A7 if A7 != 0 else "undefined"
     charlie_value = A13 * A12
-    print(charlie_value)
 
     table_1 = df.to_html(index=False)
     table_2 = [
