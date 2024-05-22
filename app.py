@@ -42,4 +42,7 @@ def index():
     print(render_template('index.html', table_1=table_1, table_2=table_2))
     return render_template('index.html', table_1=table_1, table_2=table_2)
 
-index()
+if __name__ == '__main__':
+    app.run(debug=True)
+
+# index()
