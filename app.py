@@ -7,13 +7,19 @@ app = Flask(__name__)
 def index():
     # return "Flask heroku app :)"
     # Table 1
-    table1_data = {
-        "Index #": ["A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10", "A11", "A12", "A13", "A14", "A15", "A16", "A17", "A18", "A19", "A20"],
-        "Value": [41, 18, 21, 63, 2, 53, 5, 57, 60, 93, 28, 3, 90, 39, 80, 88, 49, 60, 26, 28]
-    }
-    df = pd.DataFrame(table1_data)
+    # table1_data = {
+    #     "Index #": ["A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10", "A11", "A12", "A13", "A14", "A15", "A16", "A17", "A18", "A19", "A20"],
+    #     "Value": [41, 18, 21, 63, 2, 53, 5, 57, 60, 93, 28, 3, 90, 39, 80, 88, 49, 60, 26, 28]
+    # }
+    # df = pd.DataFrame(table1_data)
     # print(df)
+
+    file_id = "1_0lk9nzqiU1o1x879eUDJLiILz2Dylpd"
+    url = f'https://drive.google.com/uc?export=download&id={file_id}'
     
+    df = pd.read_csv(url)
+    print(df.head())
+
     # Table 2
     # Alpha value
     A5 = df.loc[df["Index #"] == "A5", "Value"].values[0]
