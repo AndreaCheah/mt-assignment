@@ -3,7 +3,7 @@ import pandas as pd
 
 app = Flask(__name__)
 
-@app.route('/', methods=['GET'])
+@app.route('/')
 def index():
     # Table 1
     table1_data = {
