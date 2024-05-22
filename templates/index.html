@@ -23,10 +23,12 @@
         <th>Category</th>
         <th>Value</th>
       </tr>
+      {% for row in table_2 %}
       <tr>
-        <td>{{ row.Category }}</td>
-        <td>{{ row.Value }}</td>
+        <td>{{ row['Category'] }}</td>
+        <td>{{ row['Value'] }}</td>
       </tr>
+      {% endfor %}
     </table>
   </body>
 </html>

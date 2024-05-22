@@ -44,7 +44,7 @@ def index():
     return render_template('index.html', table_1=table_1, table_2=table_2)
 
 if __name__ == '__main__':
-    # app.run(debug=True)
-    app.run()
+    app.run(debug=True)
+    # app.run()
 
 # index()
