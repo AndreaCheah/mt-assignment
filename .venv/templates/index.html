@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Tables 1 and 2</title>
+    <style>
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 8px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Table 1</h1>
+    <div>{{ table_1 | safe }}</div>
+    
+    <h1>Table 2</h1>
+    <table>
+      <tr>
+        <th>Category</th>
+        <th>Value</th>
+      </tr>
+      <tr>
+        <td>{{ row.Category }}</td>
+        <td>{{ row.Value }}</td>
+      </tr>
+    </table>
+  </body>
+</html>
